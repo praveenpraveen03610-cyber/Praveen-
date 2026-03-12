@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bujjikutty Secret</title><style>
+body{
+margin:0;
+padding:0;
+font-family:Arial;
+text-align:center;
+color:white;
+background:url("photo.jpg") no-repeat center/cover;
+height:100vh;
+}
+
+.box{
+background:rgba(0,0,0,0.6);
+padding:30px;
+margin-top:80px;
+border-radius:15px;
+display:inline-block;
+}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+margin:10px;
+cursor:pointer;
+}
+
+#yes{
+background:#ff4d6d;
+color:white;
+}
+
+#no{
+background:#555;
+color:white;
+position:absolute;
+}
+
+#message{
+display:none;
+font-size:22px;
+margin-top:20px;
+}
+
+#kiss{
+display:none;
+font-size:60px;
+margin-top:20px;
+}
+
+</style></head><body><h1>Hi Bujjikutty ❤️</h1><div class="box"><h2>Bujjikutty un kitta oru secret sollanum… sollata? 🤫</h2><button onclick="showLove()">Open Secret</button>
+
+<div id="message">
+<p>💌 Bujjikutty… nee promise sema Azhgaha irukka da 😍  
+Un smile patha odane en day full happy aagidum ❤️</p><p>Will you accept my kiss? 😘</p><button id="yes" onclick="kiss()">Yes</button>
+<button id="no" onmouseover="moveNo()">No</button>
+
+</div><div id="kiss">😘😘😘</div></div><audio autoplay loop>
+<source src="song.mp3" type="audio/mp3">
+</audio><script>
+
+function showLove(){
+document.getElementById("message").style.display="block";
+}
+
+function kiss(){
+document.getElementById("kiss").style.display="block";
+}
+
+function moveNo(){
+let btn=document.getElementById("no");
+btn.style.top=Math.random()*80+"%";
+btn.style.left=Math.random()*80+"%";
+}
+
+</script></body>
+</html>
